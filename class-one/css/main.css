@@ -1,0 +1,1 @@
+.square-wrapper{border:1px solid red;width:100%;padding:10px}.square-wrapper .square{width:100px;height:100px}.square-wrapper .square-red{background:red}.square-wrapper .square-blue{background:blue}.square-wrapper .square-peru{background:peru}.list-group-item{display:flex;justify-content:space-between}.list-group-item button{display:inline-block}
