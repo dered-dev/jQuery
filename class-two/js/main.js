@@ -134,11 +134,9 @@ $('.saveModalEdit').click(function(){
 })
 
 $('#editModal').on('hidden.bs.modal', function (e) {
-
   $('#user-name_edited').val('')
   $('#user-age_edited').val('')
   $('#user-phone_edited').val('')
-  
 })
 
 const getUSer = (userKey) =>{
