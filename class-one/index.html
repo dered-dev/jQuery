@@ -14,58 +14,84 @@
 ​
 
 <body>
-  <div id="square-wrapper" class="square-wrapper d-flex">
-    <div class="square square-red"></div>
-    <div class="square square-blue"></div>
-    <div class="square square-peru"></div>
+  <div class="container bg-light  pb-5 pt-5 rounded">
+    <div class="row">
+      <h2 class="text-center w-100">Toggle Class Example</h2>
+      <div class="col-12">
+        <div id="square-wrapper" class="square-wrapper d-flex">
+          <div class="square square-red rounded"></div>
+          <div class="square square-blue rounded"></div>
+          <div class="square square-peru rounded"></div>
+        </div>
+
+        <div class="controls d-flex justify-content-between mt-3 mb-3">
+          <div class="form-check ml-2">
+            <input class="form-check-input toggleFlex" type="radio" name="exampleRadios" id="exampleRadios1"
+              value="justify-content-start" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              justify-content-start
+            </label>
+          </div>
+          <div class="form-check ml-2">
+            <input class="form-check-input toggleFlex" type="radio" name="exampleRadios" id="exampleRadios2"
+              value="justify-content-end">
+            <label class="form-check-label" for="exampleRadios2">
+              justify-content-end
+            </label>
+          </div>
+          <div class="form-check ml-2">
+            <input class="form-check-input toggleFlex" type="radio" name="exampleRadios" id="exampleRadios3"
+              value="justify-content-center">
+            <label class="form-check-label" for="exampleRadios3">
+              justify-content-center
+            </label>
+          </div>
+          <div class="form-check ml-2">
+            <input class="form-check-input toggleFlex" type="radio" name="exampleRadios" id="exampleRadios4"
+              value="justify-content-between">
+            <label class="form-check-label" for="exampleRadios4">
+              justify-content-between
+            </label>
+          </div>
+          <div class="form-check ml-2">
+            <input class="form-check-input toggleFlex" type="radio" name="exampleRadios" id="exampleRadios5"
+              value="justify-content-around">
+            <label class="form-check-label" for="exampleRadios5">
+              justify-content-around
+            </label>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-12 text-center">
+        <div id="flex-btn" class="btn btn-primary mt-3 w-25">Go block!</div>
+      </div>
+    </div>
   </div>
 
-  <div class="controls">
-    <div class="form-check">
-      <input class="form-check-input toggleFlex" type="radio" name="exampleRadios" id="exampleRadios1" value="justify-content-start" checked >
-      <label class="form-check-label" for="exampleRadios1">
-        justify-content-start
-      </label>
+  <div class="container mt-5 bg-light rounded pb-5 pt-5">
+    <div class="row">
+      <h2 class="text-center w-100">To do list example</h2>
+      <div class="col-12">
+
+        <div class="to-do-wrapper w-50 d-block mx-auto mt-3 p-3 border rounded">
+          <div class="form-group">
+            <label for="">Write a task</label>
+            <div class="input-group">
+              <input id="task-input" type="text" class="form-control rounded-left">
+              <div class="input-group-append">
+                <button class="btn btn-primary rounded-right">ADD</button>
+              </div>
+            </div>
+          </div>
+          <div class="task-wrapper mt-3 w-100">
+            <span class="rounded empty__task p-3 mt-3 w-100  text-center">Add a task :)</span>
+            <ul class="task-list list-group"></ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="form-check">
-      <input class="form-check-input toggleFlex" type="radio" name="exampleRadios" id="exampleRadios2" value="justify-content-end" >
-      <label class="form-check-label" for="exampleRadios2">
-        justify-content-end
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input toggleFlex" type="radio" name="exampleRadios" id="exampleRadios3" value="justify-content-center" >
-      <label class="form-check-label" for="exampleRadios3">
-        justify-content-center
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input toggleFlex" type="radio" name="exampleRadios" id="exampleRadios4" value="justify-content-between" >
-      <label class="form-check-label" for="exampleRadios4">
-        justify-content-between
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input toggleFlex" type="radio" name="exampleRadios" id="exampleRadios5" value="justify-content-around" >
-      <label class="form-check-label" for="exampleRadios5">
-        justify-content-around
-      </label>
-    </div>
-    
   </div>
-
-  <div id="flex-btn" class="btn btn-primary mt-3 w-25">Go flex!</div>
-
-  <div class="to-do-wrapper w-50 d-block mx-auto mt-3 p-3 border border-success rounded">
-    <div class="form-group">
-        <label for="">Agregar Tarea</label>
-        <input id="task-input" type="text" class="form-control">
-        <button class="btn btn-primary mt-3">Agregar tarea</button>
-    </div>
-    <div class="task-wrapper mt-3">
-        <ul class="task-list list-group"></ul>
-    </div>
-</div>
   ​
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

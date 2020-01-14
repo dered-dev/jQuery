@@ -33,6 +33,9 @@ $('.to-do-wrapper .btn').on('click', () => {
   } else {
     $('#task-input').addClass('is-invalid').focus()
   }
+  if(typeof taskArray !== 'undefined' && taskArray.length > 0 ){
+    $('.empty__task').fadeOut(0)
+  }
 })
 
 // remove item for list and localStorage
@@ -46,6 +49,11 @@ $(function () {
   // fill list local storage
   var previousTasks = JSON.parse(localStorage.getItem("taskArray"))
   if (previousTasks !== null) {
+    if(typeof previousTasks !== 'undefined' && previousTasks.length > 0 ){
+      $('.empty__task').fadeOut(0)
+    }else{
+      $('.empty__task').fadeIn(300)
+    }
     previousTasks.forEach((task) => {
       let taskLi = ` <li class="list-group-item">${task} <button type="button" class="btn btn-danger js__deleteTask">X</button>
       </li>`
@@ -58,6 +66,11 @@ $(function () {
     var index = $(event.target).closest('.list-group-item').index()
     $(event.target).closest('.list-group-item').remove()
     removeLocalTasks(taskArray,index)
+    if(typeof taskArray !== 'undefined' && taskArray.length > 0 ){
+      $('.empty__task').fadeOut(0)
+    }else{
+      $('.empty__task').fadeIn(300)
+    }
   })
 
 })
