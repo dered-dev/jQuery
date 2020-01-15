@@ -29,7 +29,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="" class="w-100 mx-auto d-block p-3 border rounded my-3">
+          <form action="" class="w-100 mx-auto d-block p-3 rounded my-3 ">
             <div class="form-group">
               <label for="">Nombre</label>
               <input id="user-name_edited" type="text" class="form-control">
@@ -45,8 +45,8 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary saveModalEdit">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar edición</button>
+          <button type="button" class="btn btn-primary saveModalEdit">Guardar</button>
         </div>
       </div>
     </div>
@@ -59,7 +59,7 @@
       </div>
       <div class="col-4">
         <!-- form edit user -->
-        <form action="" class="mx-auto d-block p-3 border rounded  bg-dark text-white">
+        <form action="" class="mx-auto d-block p-4 border rounded  bg-dark text-white form__addKoder">
           <div class="form-group">
             <label for="">Nombre</label>
             <input id="user-name" type="text" class="form-control">
@@ -80,8 +80,8 @@
         </form>
       </div>
       <div class="col-8">
-        <div id="users-table" class="table-wrapper d-block mx-auto">
-          <table class="table table-striped table-dark table-bordered table-responsive">
+        <div id="users-table" class="table-wrapper d-block mx-auto rounded">
+          <table class="table table-striped table-dark table-bordered table-responsive rounded" >
             <thead>
               <tr>
                 <th scope="col">#</th>
@@ -92,7 +92,7 @@
                 <th> Editar</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="table__body">
 
             </tbody>
           </table>
@@ -100,7 +100,35 @@
       </div>
     </div>
   </div>
-
+  <style>
+  .table-responsive {
+    display: table;
+  }
+  
+  .editable__td.phone input{
+    max-width: 80px;
+  }
+  .editable__td.age input{
+    max-width: 30px;
+  }
+  .editable__td input{
+    border:none;
+    padding: .125em;
+    max-width: 100%;
+  }
+  .options__table .edited__button{
+    display: none;
+  }
+  .options__table .normal__button{
+    display: inline-block;
+  }
+  .options__table.is-edited .edited__button{
+    display: inline-block;
+  }
+  .options__table.is-edited .normal__button{
+    display:none;
+  }
+</style>
   ​
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
